@@ -18,10 +18,13 @@ public class hero : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         //
         score = 0;
-        count.text = score.ToString();
+        count.text = "Press SPACE to start";
+        count.alignment = TextAnchor.UpperLeft;
+        //score.ToString();
         //
         //Again = GetComponent<Button>();
         Again.enabled = false;
+        rb.gravityScale = 0f; // Modified
     }
 
     // Update is called once per frame
@@ -29,9 +32,11 @@ public class hero : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            rb.gravityScale = 3f; // Modified
             //FlyUp(); == rb.AddForce(Vector2.up*20, mode: ForceMode2D.Impulse);
             //FlyUp();
             rb.AddForce(Vector2.up*force, mode: ForceMode2D.Impulse);
+            count.text = score.ToString();
         }
         if (rb.velocity.y >= 0)
         {

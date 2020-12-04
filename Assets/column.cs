@@ -7,6 +7,7 @@ public class column : MonoBehaviour
     public Rigidbody2D rb;
     public float speed;
     // Start is called before the first frame update
+    private int started = 0;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -15,7 +16,11 @@ public class column : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(translation: Vector2.left * speed * Time.deltaTime);
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            started = 1;
+        }
+        transform.Translate(translation: Vector2.left * speed * Time.deltaTime * started);
         //rb.velocity = new Vector2 (-speed, 0f);
         /*if (rb.transform.position < -11)
         {

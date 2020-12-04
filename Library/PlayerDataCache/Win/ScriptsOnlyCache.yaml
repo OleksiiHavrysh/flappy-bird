@@ -590,4 +590,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/User/Desktop/Unity Games/Flappy Bird/Flappy Bird.exe
+  playerPath: C:/Users/User/Desktop/UnityGames/FlappyBird/Flappy Bird.exe
