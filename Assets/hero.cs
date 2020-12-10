@@ -23,8 +23,11 @@ public class hero : MonoBehaviour
         //score.ToString();
         //
         //Again = GetComponent<Button>();
+        //Again = Again.GetComponent<Button>();
         Again.enabled = false;
         rb.gravityScale = 0f; // Modified
+        Again.onClick.AddListener(TaskOnClick);
+
     }
 
     // Update is called once per frame
@@ -52,12 +55,13 @@ public class hero : MonoBehaviour
         {
             transform.rotation= Quaternion.Euler(0f, 0f, -10);
         }
-        /*if (Again.())
-        {
-            SceneManager.LoadScene(0);
-        }*/
+        
         
     }
+
+    void TaskOnClick(){
+		Debug.Log ("You have clicked the button!");
+	}
 
     void FlyUp()
     {
@@ -76,6 +80,7 @@ public class hero : MonoBehaviour
         Debug.Log(message: "You lost!");
         count.text = "You lost!\nScore: " + score.ToString();
         Destroy(gameObject);
+        count.transform.position = count.transform.position + new Vector3(219+30,-100,-100);
         
     }
     
@@ -85,4 +90,7 @@ public class hero : MonoBehaviour
         count.text = score.ToString();
         Debug.Log(score);
     }
+    void TaskOnClick(Button Again){
+		Debug.Log ("You have clicked the button!");
+	}
 }
