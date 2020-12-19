@@ -45,7 +45,9 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\MenuScript.cs" />
      <Compile Include="Assets\PipeSpawner.cs" />
+     <Compile Include="Assets\SettingsScript.cs" />
      <Compile Include="Assets\column.cs" />
      <Compile Include="Assets\hero.cs" />
  <Reference Include="UnityEngine">

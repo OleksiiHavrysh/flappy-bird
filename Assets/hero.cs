@@ -8,7 +8,7 @@ public class hero : MonoBehaviour
 {
     public Rigidbody2D rb;
     public float force;
-    private int score;
+    private int score = 0;
     public Text count;
     public Button Again;
 
@@ -17,14 +17,13 @@ public class hero : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         //
-        score = 0;
         count.text = "Press SPACE to start";
-        count.alignment = TextAnchor.UpperLeft;
+        //count.alignment = TextAnchor.UpperLeft;
         //score.ToString();
         //
         //Again = GetComponent<Button>();
         //Again = Again.GetComponent<Button>();
-        Again.enabled = false;
+        Again.enabled = true;
         rb.gravityScale = 0f; // Modified
         Again.onClick.AddListener(TaskOnClick);
 
@@ -39,7 +38,12 @@ public class hero : MonoBehaviour
             //FlyUp(); == rb.AddForce(Vector2.up*20, mode: ForceMode2D.Impulse);
             //FlyUp();
             rb.AddForce(Vector2.up*force, mode: ForceMode2D.Impulse);
-            count.text = score.ToString();
+            if (!GameObject. Find("bird"))
+            {
+                SceneManager.LoadScene("Game");
+            }
+            if (count.text == "Press SPACE to start") count.text = "0";
+            
         }
         if (rb.velocity.y >= 0)
         {
@@ -60,7 +64,8 @@ public class hero : MonoBehaviour
     }
 
     void TaskOnClick(){
-		Debug.Log ("You have clicked the button!");
+		Debug.Log ("Menu");
+        SceneManager.LoadScene("Menu");
 	}
 
     void FlyUp()
@@ -72,16 +77,20 @@ public class hero : MonoBehaviour
         Debug.Log(message: "You lost!");
         Destroy(gameObject);
     }*/
-    
+    IEnumerator waiter()
+    {
+        //Wait for 1 second
+        yield return new WaitForSecondsRealtime(1);
+    }
     void OnCollisionEnter2D(Collision2D other)
     {
         Again.enabled = true;
         //if (other != )
-        Debug.Log(message: "You lost!");
-        count.text = "You lost!\nScore: " + score.ToString();
+        Debug.Log(message: "Game Over!");
+        count.text = "Game Over!\nScore: " + score.ToString() + "\n\nPress SPACE to restart";
         Destroy(gameObject);
-        count.transform.position = count.transform.position + new Vector3(219+30,-100,-100);
         
+
     }
     
     void OnTriggerEnter2D(Collider2D other)
@@ -90,7 +99,4 @@ public class hero : MonoBehaviour
         count.text = score.ToString();
         Debug.Log(score);
     }
-    void TaskOnClick(Button Again){
-		Debug.Log ("You have clicked the button!");
-	}
 }

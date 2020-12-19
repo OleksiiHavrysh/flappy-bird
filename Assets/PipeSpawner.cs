@@ -40,8 +40,9 @@ public class PipeSpawner : MonoBehaviour
                 float rand = Random.Range(-1.3f,2f);
                 GameObject newPipes = Instantiate(Pipes, new Vector3(12, rand, 0), Quaternion.identity);
                 Destroy (newPipes, 5);
-                /*if (GameObject. Find("bird") == null)
-                    break;*/
+                if (!GameObject. Find("bird")){
+                    break;
+                }
                 /*
             }
             else

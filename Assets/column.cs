@@ -21,6 +21,7 @@ public class column : MonoBehaviour
             started = 1;
         }
         transform.Translate(translation: Vector2.left * speed * Time.deltaTime * started);
+        
         //rb.velocity = new Vector2 (-speed, 0f);
         /*if (rb.transform.position < -11)
         {
