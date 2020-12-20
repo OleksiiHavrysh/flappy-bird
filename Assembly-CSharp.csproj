@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets\MenuScript.cs" />
      <Compile Include="Assets\PipeSpawner.cs" />
+     <Compile Include="Assets\RecordsScript.cs" />
      <Compile Include="Assets\SettingsScript.cs" />
      <Compile Include="Assets\column.cs" />
      <Compile Include="Assets\hero.cs" />

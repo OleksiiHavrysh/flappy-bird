@@ -3,6 +3,7 @@ ScriptsOnlyBuild:
     Assembly-CSharp.dll:
     - MenuScript
     - PipeSpawner
+    - RecordsScript
     - SettingsScript
     - column
     - hero
@@ -27,6 +28,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
     - UnityEngine.UI.VerticalLayoutGroup
   sceneClasses:
@@ -78,7 +80,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13654}
     - Class: 114
-      Script: {instanceID: 14264}
+      Script: {instanceID: 14266}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -131,7 +133,58 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13654}
     - Class: 114
-      Script: {instanceID: 14264}
+      Script: {instanceID: 14266}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    Assets/Scenes/Records.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 11194}
+    - Class: 114
+      Script: {instanceID: 11484}
+    - Class: 114
+      Script: {instanceID: 11538}
+    - Class: 114
+      Script: {instanceID: 12198}
+    - Class: 114
+      Script: {instanceID: 12896}
+    - Class: 114
+      Script: {instanceID: 13038}
+    - Class: 114
+      Script: {instanceID: 13654}
+    - Class: 114
+      Script: {instanceID: 14266}
+    - Class: 114
+      Script: {instanceID: 57336}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -180,9 +233,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13654}
     - Class: 114
-      Script: {instanceID: 14264}
+      Script: {instanceID: 13866}
     - Class: 114
-      Script: {instanceID: 34018}
+      Script: {instanceID: 14266}
+    - Class: 114
+      Script: {instanceID: 14308}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -508,7 +563,7 @@ ScriptsOnlyBuild:
     className: SpriteSkin
   - hash:
       serializedVersion: 2
-      Hash: 921c8cb5b0f9df3b0874744ef5009b3d
+      Hash: 6e1e02824e5d2df00690b2ed0827359a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: MenuScript
@@ -590,6 +645,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools
     className: BeforeAfterTestCommandState
+  - hash:
+      serializedVersion: 2
+      Hash: 6e4e06dfb30f79adccbf868e985b779f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SettingsScript
   - hash:
       serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
@@ -700,13 +761,14 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: b87ba204537beb431c457cb58321211e
+      Hash: 42d76c758bc890916d7b118618d21129
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: SettingsScript
+    className: RecordsScript
   platform: 5
   scenePathNames:
   - Assets/Scenes/Game.unity
   - Assets/Scenes/Menu.unity
   - Assets/Scenes/Settings.unity
+  - Assets/Scenes/Records.unity
   playerPath: C:/Users/User/Desktop/UnityGames/FlappyBird/Flappy Bird.exe

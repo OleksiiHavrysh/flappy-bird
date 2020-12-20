@@ -10,6 +10,7 @@ public class MenuScript : MonoBehaviour
     public Button start;
     public Button settings;
     public Button exit;
+    public Button records;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,6 +24,7 @@ public class MenuScript : MonoBehaviour
 
         start.onClick.AddListener(TaskOnClickStart);
         settings.onClick.AddListener(TaskOnClickSettings);
+        records.onClick.AddListener(TaskOnClickRecords);
         exit.onClick.AddListener(TaskOnClickExit);
     }
     void GoToMain()
@@ -41,4 +43,8 @@ public class MenuScript : MonoBehaviour
 		Debug.Log ("Exit");
         Application.Quit();
 	}
+    void TaskOnClickRecords(){
+        Debug.Log ("Records");
+        SceneManager.LoadScene("Records");
+    }
 }

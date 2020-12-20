@@ -89,6 +89,10 @@ public class hero : MonoBehaviour
         Debug.Log(message: "Game Over!");
         count.text = "Game Over!\nScore: " + score.ToString() + "\n\nPress SPACE to restart";
         Destroy(gameObject);
+        if (score > PlayerPrefs.GetInt("record"))
+            PlayerPrefs.SetInt("record", score);
+        else
+            PlayerPrefs.SetInt("record", PlayerPrefs.GetInt("record"));
         
 
     }

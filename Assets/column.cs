@@ -5,11 +5,18 @@ using UnityEngine;
 public class column : MonoBehaviour
 {
     public Rigidbody2D rb;
-    public float speed;
+    public float speed = 5; 
     // Start is called before the first frame update
     private int started = 0;
     void Start()
     {
+        if (!PlayerPrefs.HasKey("velocity"))
+        {
+            PlayerPrefs.SetFloat("velocity", speed);
+        }
+        else{
+            speed = PlayerPrefs.GetFloat("velocity");
+        }
         rb = GetComponent<Rigidbody2D>();
     }
 
